@@ -1,0 +1,62 @@
+/* Mobile only: bring the final skyline image closer to © SyedShayan.com */
+      @media (max-width: 767px) {
+        .footer-end-city {
+          margin-top: 25px !important;
+        }
+      }
+
+/* disable text selection & dragging */
+  body, p, h1, h2, h3, h4, h5, h6, a, span, div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  img { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
+
+  /* optional overlay watermark container */
+  .session-watermark {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; /* doesn't block clicks */
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    opacity: 0.12;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+  .session-watermark span {
+    margin-right: 30px;
+    transform: rotate(-25deg);
+    white-space: nowrap;
+  }
+
+@keyframes gold-shimmer {  
+        0%, 100% {  
+            border-color: rgba(212, 175, 55, 0.3);  
+        }  
+        50% {  
+            border-color: #d4af37;  
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);  
+        }  
+    }  
+ 
+    .animate-gold {  
+        animation: gold-shimmer 3s infinite ease-in-out;  
+    }  
+ 
+    .popup-content {  
+        transform: scale(0.95);  
+        opacity: 0;  
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);  
+    }  
+ 
+    #siteGuestPopup.active .popup-content {  
+        transform: scale(1);  
+        opacity: 1;  
+    }

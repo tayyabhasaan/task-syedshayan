@@ -1,0 +1,288 @@
+@media (max-width: 700px) {
+  .research-policy-mobile-wrap {
+    margin-top: -20px !important;
+  }
+}
+      
+        /* Base states (Hidden before scroll) */
+        .hs-section,
+        .hs-glass-card,
+        .hs-badge,
+        .hs-title,
+        .hs-subtitle,
+        .hs-desc,
+        .hs-card,
+        .hs-footer-link {
+          opacity: 0;
+          will-change: transform, opacity;
+        }
+
+        /* Trigger class added by JS */
+        .animate-now {
+          opacity: 1 !important;
+        }
+
+        /* Main section fade */
+        .animate-now.hs-section {
+          animation: sectionFade 1s ease-out both;
+        }
+
+        @keyframes sectionFade {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Glass card coming from top */
+        .animate-now .hs-glass-card {
+          animation: slideDown 0.9s ease-out both;
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-40px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Heading animations */
+        .animate-now .hs-badge,
+        .animate-now .hs-title,
+        .animate-now .hs-subtitle,
+        .animate-now .hs-desc,
+        .animate-now .hs-footer-link {
+          animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        .animate-now .hs-badge {
+          animation-delay: 0.2s;
+        }
+
+        .animate-now .hs-title {
+          animation-delay: 0.35s;
+        }
+
+        .animate-now .hs-subtitle {
+          animation-delay: 0.5s;
+        }
+
+        .animate-now .hs-desc {
+          animation-delay: 0.65s;
+        }
+
+        .animate-now .hs-footer-link {
+          animation-delay: 1.2s;
+        }
+
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Grid cards animation */
+        .animate-now .hs-card {
+          animation-duration: 0.8s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+        }
+
+        .animate-now .hs-card-left {
+          animation-name: slideInLeft;
+        }
+
+        .animate-now .hs-card-right {
+          animation-name: slideInRight;
+        }
+
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-35px) translateY(20px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(35px) translateY(20px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        /* Stagger delays */
+        .delay-1 {
+          animation-delay: 0.25s;
+        }
+
+        .delay-2 {
+          animation-delay: 0.35s;
+        }
+
+        .delay-3 {
+          animation-delay: 0.45s;
+        }
+
+        .delay-4 {
+          animation-delay: 0.55s;
+        }
+
+        .delay-5 {
+          animation-delay: 0.65s;
+        }
+
+        .delay-6 {
+          animation-delay: 0.75s;
+        }
+
+        .delay-7 {
+          animation-delay: 0.85s;
+        }
+
+        .delay-8 {
+          animation-delay: 0.95s;
+        }
+
+        /* Hover effects */
+        .hs-card-hover {
+          transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+        }
+
+        .hs-card-hover:hover {
+          transform: translateY(-6px) scale(1.02);
+          box-shadow: 0 12px 30px rgba(26, 74, 124, 0.15);
+        }
+
+        .hs-card-hover img {
+          transition: transform 0.5s ease;
+        }
+
+        .hs-card-hover:hover img {
+          transform: scale(1.06);
+        }
+
+        .hs-footer-link a {
+          position: relative;
+          display: inline-block;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .hs-footer-link a:hover {
+          transform: translateX(6px);
+          color: #1a4a7c;
+        }
+
+        /* Optional floating glow */
+        .hs-glass-card::before {
+          content: "";
+          position: absolute;
+          top: -40%;
+          left: -40%;
+          width: 76%;
+          height: 180%;
+          background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0) 100%);
+          transform: rotate(18deg);
+          animation: shineMove 5s linear infinite;
+          pointer-events: none;
+        }
+
+        @keyframes shineMove {
+          0% {
+            transform: translateX(-120%) rotate(18deg);
+          }
+
+          100% {
+            transform: translateX(220%) rotate(18deg);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+          .hs-section,
+          .hs-glass-card,
+          .hs-badge,
+          .hs-title,
+          .hs-subtitle,
+          .hs-desc,
+          .hs-footer-link,
+          .hs-card {
+            animation: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+          }
+        }
+
+.day-scroll-box {
+              overflow: hidden;
+              height: 16px;
+            }
+
+            .date-scroll-box {
+              overflow: hidden;
+              height: 32px;
+            }
+
+            @media (min-width: 768px) {
+              .day-scroll-box {
+                height: 18px;
+              }
+
+              .date-scroll-box {
+                height: 38px;
+              }
+            }
+
+            @media (min-width: 1024px) {
+              .day-scroll-box {
+                height: 20px;
+              }
+
+              .date-scroll-box {
+                height: 42px;
+              }
+            }
+
+            .run-calendar-anim {
+              animation: calendar-slide-up 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+            }
+
+            @keyframes calendar-slide-up {
+              0% {
+                transform: translateY(0);
+                opacity: 0;
+              }
+
+              20% {
+                opacity: 1;
+              }
+
+              100% {
+                transform: translateY(-50%);
+              }
+            }

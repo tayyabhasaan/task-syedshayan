@@ -1,0 +1,171 @@
+@media (min-width: 768px) and (max-width: 1023px) {
+    #typewriter {
+        max-width: 290px;
+        font-size: 11px;
+        line-height: 12px;
+    }
+
+    .typewriter-line {
+        min-height: 12px;
+    }
+}
+    
+.typewriter-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow: visible;
+    vertical-align: top;
+}
+
+.typewriter-line {
+    display: block;
+    white-space: nowrap;
+    min-height: 13px;
+}
+
+.typewriter-line.is-typing::after {
+    content: none !important;
+    display: none !important;
+}
+
+@keyframes blink-caret {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #ac7420;
+    }
+}
+
+/* Mobile: three lines */
+#typewriter {
+    max-width: calc(100vw - 105px);
+    /*min-height: 39px;*/
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 13px;
+}
+
+/* Tablet: two lines */
+@media (min-width: 640px) and (max-width: 1023px) {
+    #typewriter {
+        max-width: none;
+        min-height: 28px;
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .typewriter-line {
+        min-height: 14px;
+    }
+}
+
+/* Computer: two lines */
+@media (min-width: 1024px) {
+    #typewriter {
+        max-width: none;
+        min-height: 30px;
+        font-size: 0.8rem;
+        line-height: 15px;
+    }
+
+    .typewriter-line {
+        min-height: 15px;
+    }
+}
+
+.only-header-mobile-h {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+
+    height: 100px !important;
+    min-height: 100px !important;
+
+    z-index: 9999;
+
+    background-image: url('/Images/header.png') !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/* MOBILE - fixed header ke neeche page ko space */
+@media (max-width: 639px) {
+    body {
+        padding-top: 108px !important;
+    }
+}
+
+/* Desktop/tablet background */
+@media (min-width: 640px) {
+    .only-header-mobile-h {
+        background-image: url('/Images/header-bg-20.jpeg') !important;
+        background-position: center !important;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+    .only-header-mobile-h {
+        background-image: url('/Images/header-bg-20.jpeg') !important;
+        background-position: center !important;
+        min-height: 115px !important;
+        height: 115px !important;
+    }
+
+    body {
+        padding-top: 123px !important;
+    }
+}
+
+
+/* =========================
+   TABLET / SMALL LAPTOP
+========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .only-header-mobile-h {
+        background-image: url('/Images/header-bg-20.jpeg') !important;
+        background-position: center !important;
+        min-height: 100px !important;
+        height: 100px !important;
+    }
+
+    body {
+        padding-top: 108px !important;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px) {
+
+    .only-header-mobile-h {
+        background-image: url('/Images/header-bg-20.jpeg') !important;
+        background-position: center !important;
+        min-height: 100px !important;
+        height: 100px !important;
+    }
+
+    body {
+        padding-top: 108px !important;
+    }
+}
+
+        
